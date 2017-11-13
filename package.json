@@ -1,0 +1,37 @@
+{
+  "name": "Inventory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gcloud app deploy",
+    "start": "node index.js",
+    "lint": "samples lint",
+    "pretest": "npm run lint",
+    "system-test": "samples test app",
+    "e2e-test": "samples test deploy"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1",
+    "@google-cloud/nodejs-repo-tools": "1.4.17"
+  },
+  "cloud-repo-tools": {
+    "test": {
+      "app": {
+        "msg": "Inventory, api!"
+      }
+    },
+    "requiresKeyFile": true,
+    "requiresProjectId": true
+  }
+}
